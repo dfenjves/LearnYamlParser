@@ -9,14 +9,14 @@ yamarray.slice!(0..1)
 newyamarray = yamarray.collect { |item| item.gsub("-   ","")  }
 
 
-csv = "Topic Title,Unit Title,Lesson Title,Lesson URL\n"
+csv = "Topic Title,Lesson URL\n"
 newyamarray.each do |item|
   if item.match(/^\s{4}title/)
-    csv += "#{item.strip.gsub("title: ","TOPIC: ")},,,\n"
+    csv += "#{item.strip.gsub("title: ","TOPIC: ")},\n"
   elsif item.match(/^\s{8}title/)
-    csv += ",#{item.strip.gsub("title: ","UNIT: ")},,\n"
+    csv += "#{item.strip.gsub("title: ","UNIT: ")},\n"
   elsif item.match(/^\s{12}title/)
-    csv += ",,#{item.strip.gsub("title: ","LESSON: ")}," 
+    csv += "#{item.strip.gsub("title: ","LESSON: ")}," 
   elsif item.match(/source:/)
       csv += "#{item.strip.gsub("source: ","")}\n" 
   end
