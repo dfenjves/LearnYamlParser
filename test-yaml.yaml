@@ -1,0 +1,49 @@
+track:
+    title: Web Development Fundamentals
+    uuid: e48fbd35-d919-40dd-82f8-8ec785ce5487
+    topics:
+    -   title: Introduction and Set Up
+        uuid: 1bdad18b-21d4-43af-931e-20635f052d90
+        units:
+        -   title: Intro to Command Line and BASH
+            uuid: d00d096a-a096-4b65-9aa6-36e654a9f1a0
+            lessons:
+            -   title: Intro to the Shell
+                uuid: 06e00dd1-ef91-4e93-be53-0d0226d82efe
+                contents:
+                -   title: Intro To The Shell
+                    source: https://github.com/learn-co-curriculum/intro-to-the-shell
+                    uuid: b5e3cda5-7d4c-4d18-bc92-9942774454be
+            -   title: First Terminal
+                uuid: e40c4c3d-af38-4975-9d09-80591a004676
+                contents:
+                -   title: First Terminal
+                    source: https://github.com/learn-co-curriculum/first-terminal
+                    uuid: c70152d2-a71c-4b68-b209-2c4844f1abe9
+            -   title: BASH Tutorial
+                uuid: 2781944f-dbdd-44ca-bf1e-96f5287c175b
+                contents:
+                -   title: Bash Tutorial
+                    source: https://github.com/learn-co-curriculum/bash-tutorial
+                    uuid: 8e44a957-89e0-4b3c-85d1-590e66694909
+            -   title: CLI Basics
+                uuid: cf01f0e6-9db9-40f4-8e16-4c6bab366672
+                contents:
+                -   title: Cli Basics
+                    source: https://github.com/learn-co-curriculum/cli-basics
+                    uuid: 1da79c0f-3c29-42fe-8673-99e4aa5b9b9e
+        -   title: Environment Setup
+            uuid: df3d1842-8b93-4c98-a159-e30fe0556901
+            lessons:
+            -   title: Environment Setup Summary
+                uuid: 83a5c0fa-1f0e-4f45-afee-774caf509dbf
+                contents:
+                -   title: Ruby Environment Setup Summary
+                    source: https://github.com/learn-co-curriculum/ruby-environment-setup-summary
+                    uuid: 14d23eb6-c1da-41ce-91b5-e485857b1b2b
+            -   title: Bonus Setup
+                uuid: 2cce8f2e-4a65-4be5-ae0e-c22a86249b21
+                contents:
+                -   title: Bonus Setup Readme
+                    source: https://github.com/learn-co-curriculum/bonus-setup-readme
+                    uuid: 9c4cbd4e-81dd-4590-97ed-e83c36ddbc9b
