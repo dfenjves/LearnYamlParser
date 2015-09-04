@@ -1,6 +1,7 @@
-require 'pry'
-require 'httparty'
-puts "Yaml URL:"
+require 'bundler'
+Bundler.require
+
+puts "Raw Yaml URL:"
 url = gets.chomp
 response = HTTParty.get(url)
 
@@ -31,11 +32,3 @@ fname = "#{trackname.gsub(" ","-")}.csv"
 output = File.open(fname, "w")
 output.puts(csv)
 output.close
-
-
-# Intro to Web,,,,
-# ,Welcome,,,
-# ,,Ruby Basics,,
-# ,,,Strings,www.test.com
-# ,,,Numbers,www.another.com
-# ,,,Arrays,www.last.com
