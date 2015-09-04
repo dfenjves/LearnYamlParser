@@ -1,11 +1,16 @@
 require 'pry'
-yaml_file = File.open("test-yaml.yaml", "r")
-yaml_content = yaml_file.read
+require 'httparty'
+puts "Yaml URL:"
+url = gets.chomp
+response = HTTParty.get(url)
+
+yaml_content = response.body
 yamarray = yaml_content.split("\n")
 yamarray.delete_if do |item| 
   item.include?("uuid") || item.include?("contents") || item.match(/^\s{16}\S/)
 end
-yamarray.slice!(0..1)
+trackname = yamarray[2].gsub("    title: ","")
+yamarray.slice!(0..2)
 newyamarray = yamarray.collect { |item| item.gsub("-   ","")  }
 
 
@@ -22,7 +27,7 @@ newyamarray.each do |item|
   end
 end
 
-fname = "output.csv"
+fname = "#{trackname.gsub(" ","-")}.csv"
 output = File.open(fname, "w")
 output.puts(csv)
 output.close
